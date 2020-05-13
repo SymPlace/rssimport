@@ -2,6 +2,9 @@
 
 x.x:
 
+2.1.1-1 (05/13/2020):
+ - Fix: require argument in elgg_in_context() function
+
 2.1.1 (12/16/2015):
  - send notifications for cron-created imports if plugin setting allows
 

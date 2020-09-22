@@ -294,7 +294,6 @@ class RSSImport Extends \ElggObject {
 
 		$params = array(
 			'import_into' => $import_into,
-			'entity' => Self
 		);
 		return elgg_trigger_plugin_hook('rssimport', 'content:importable', $params, $return);
 	}

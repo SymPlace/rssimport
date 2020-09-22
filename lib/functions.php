@@ -86,7 +86,7 @@ function cron_import($period) {
 	$batch = new \ElggBatch('elgg_get_entities_from_metadata', $options);
 
 	foreach ($batch as $rssimport) {
-		if (!$rssimport->isContentImportable($rssimport->import_into)) {
+		if (!RSSImport::isContentImportable($rssimport->import_into)) {
 			continue;
 		}
 

@@ -19,7 +19,7 @@ if (!$items) {
 	forward(REFERRER);
 }
 
-if (!$rssimport->isContentImportable($rssimport->import_into)) {
+if (!RSSImport::isContentImportable($rssimport->import_into)) {
 	register_error(elgg_echo('rssimport:invalid:content:type', array(elgg_echo($rssimport->import_into))));
 	forward(REFERRER);
 }

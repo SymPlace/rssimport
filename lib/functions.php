@@ -67,6 +67,11 @@ function rssimport_add_source($item) {
  * @param type $period
  */
 function cron_import($period) {
+        $cron_allowed = elgg_get_plugin_setting('cron_' . $period, 'rssimport');
+        if($cron_allowed != 'yes') {
+                return;
+        }
+        
 	// change context for permissions
 	elgg_push_context('rssimport_import');
 	elgg_set_ignore_access(true);
